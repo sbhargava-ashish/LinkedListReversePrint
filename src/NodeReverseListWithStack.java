@@ -6,9 +6,9 @@ public class NodeReverseListWithStack {
 
     private NodeReverseListWithStack next;
 
-    public NodeReverseListWithStack(int value, NodeReverseListWithStack nodeReverseListWithStack) {
+    public NodeReverseListWithStack(int value, NodeReverseListWithStack node) {
         this.value = value;
-        this.next = nodeReverseListWithStack;
+        this.next = node;
     }
 
     @Override
@@ -36,10 +36,10 @@ public class NodeReverseListWithStack {
 
     }
 
-    private void print(NodeReverseListWithStack nodeReverseListWithStack, Stack<Integer> stack) {
-        if (nodeReverseListWithStack != null) {
-            stack.add(nodeReverseListWithStack.value);
-            print(nodeReverseListWithStack.next, stack);
+    private void print(NodeReverseListWithStack node, Stack<Integer> stack) {
+        if (node != null) {
+            stack.add(node.value);
+            print(node.next, stack);
         }
     }
 
